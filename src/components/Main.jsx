@@ -8,23 +8,27 @@ export default function Main() {
 
     const el = React.useRef(null);
 
+    const typ= {
+        strings: ["Frontend Developer", "Web developer"],
+        typeSpeed: 100,
+        backSpeed: 90,
+        backDelay: 1000,
+        loop: true
+    }
+
     React.useEffect(() => {
-        const typed = new Typed(el.current, {
-            strings: ["Frontend Developer", "Web developer"],
-            typeSpeed: 100,
-            backSpeed: 90,
-            backDelay: 1000,
-            loop: true
-        });
+        const typed = new Typed(el.current,typ);
+        
 
         return () => {
             // Destroy Typed instance during cleanup to stop animation
             typed.destroy();
+      
         };
     }, []);
     return (
         <div className="container">
-            <div className=" container row h3" id="nvb">
+            <div className=" container row h3 fixed-top " id="nvb" style={{backgroundColor:"rgb(12, 24, 38, 255)"}}>
                 <div className=" col-sm-10 col-lg-4  text-center">Portfolio</div>
                 <div className="col-sm-2 d-lg-none text-center"><i className='bx bx-dots-vertical-rounded'></i></div>
                 <div className="col-lg-8  row text-end d-none d-lg-block text-decoration-none">
@@ -36,11 +40,14 @@ export default function Main() {
                 </div>
             </div>
             <div id="upbtn">
-                <a href="abcd" className=" bx bx-up-arrow-alt btn btn-outline-light display-1 bnt"> </a>
+                <a href="#" className=" bx bx-up-arrow-alt btn btn-outline-light display-1 bnt"> </a>
             </div>
+                <div className=" col-lg-3 d-lg-none mt-5 d-flex ">
+                    <img id="imgbg" className=" border rounded-circle img-fluid mx-auto" src={myimg} alt="" />
+                </div>
             <div className=" mt-5 row ">
                 {/* <!-- dsktpview --> */}
-                <div className=" text-start col-lg-9 d-none d-lg-block mt-5">
+                <div className=" text-start col-lg-9  mt-5">
                     <h4>Hey I'm </h4>
                     <h1>Sujeendhar M</h1>
                     <h4>I'm a <span className="txt1 h3" id="txt" ref={el}></span ></h4>
@@ -51,20 +58,10 @@ export default function Main() {
                     <i className='bx bxl-gmail display-6 rounded-2  bnt'></i><br />
                     <button className=" bnt btn  btn-outline-light mt-3"> More About Me..</button>
                 </div>
-                <div className=" col-lg-3  mt-5">
+                <div className=" col-lg-3 d-none d-lg-block mt-5">
                     <img id="imgbg" className=" border rounded-circle img-fluid" src={myimg} alt="" />
                 </div>
-                {/* <!-- phview --> */}
-                <div   className=" text-start col-lg-9 d-lg-none d-sm-block mt-5  ">
-                    <h4>Hey I'm </h4>
-                    <h2>Sujeendhar M</h2>
-                    <h4>I'm a <span className="txt1 h3" id='txt' ref={el}> </span ></h4>
-                    <p>To use my web development skills to create user-fkkkriendly websites and applications while continuously
-                        learning and implementing innovative solutions</p>
-                    <i className=' bx bxl-linkedin-square display-6 me-3 rounded-3  bnt '></i>
-                    <i className='bx bxl-github display-6 rounded-circle  bnt'></i><br />
-                    <button className=" bnt btn  btn-outline-light mt-3"> More About Me..</button>
-                </div>
+               
             </div>
             {/* <!-- no shake-error --> */}
             <div className="  container mt-5 text-center">
@@ -210,7 +207,7 @@ export default function Main() {
                 <h1 className=" mt-2 text-center ">Contact <span id="grdntxt">Me</span></h1>
             </div>
             <div className="row mt-5">
-                <div className="col">
+                <div className="col-sm-12 col-lg-6 mt-5">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id molestiae cumque omnis distinctio, libero
                         quos consectetur ipsum earum, totam, nulla aliquid! Ipsum delectus ab pariatur architecto quisquam
                         eligendi possimus omnis illum, sapiente corrupti iure, assumenda, hic unde illo quae obcaecati laborum
@@ -218,7 +215,7 @@ export default function Main() {
                     <i className=' bx bxl-linkedin-square display-6 me-3 rounded-3  bnt '></i>
                     <i className='bx bxl-github display-6 rounded-circle  bnt'></i><br />
                 </div>
-                <div className="col mx-5">
+                <div className=" col-sm-12 col-lg-6 mt-5">
                     <input type="text" className="form-control" placeholder=" Name" /><br />
                     <input type="text" className="form-control" placeholder=" Email" /><br />
                     <input type="text" className="form-control" placeholder=" Subject" /><br />
