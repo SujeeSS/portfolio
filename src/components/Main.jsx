@@ -8,7 +8,7 @@ export default function Main() {
 
     const el = React.useRef(null);
 
-    const typ= {
+    const typ = {
         strings: ["Frontend Developer", "Web developer"],
         typeSpeed: 100,
         backSpeed: 90,
@@ -17,18 +17,18 @@ export default function Main() {
     }
 
     React.useEffect(() => {
-        const typed = new Typed(el.current,typ);
-        
+        const typed = new Typed(el.current, typ);
+
 
         return () => {
             // Destroy Typed instance during cleanup to stop animation
             typed.destroy();
-      
+
         };
     }, []);
     return (
         <div className="container">
-            <div className=" container row h3 fixed-top " id="nvb" style={{backgroundColor:"rgb(12, 24, 38, 255)"}}>
+            <div className=" container row h3 fixed-top mx-auto" id="nvb" style={{ backgroundColor: "rgb(12, 24, 38, 255)" }}>
                 <div className=" col-sm-10 col-lg-4  text-center">Portfolio</div>
                 <div className="col-sm-2 d-lg-none text-center"><i className='bx bx-dots-vertical-rounded'></i></div>
                 <div className="col-lg-8  row text-end d-none d-lg-block text-decoration-none">
@@ -42,9 +42,10 @@ export default function Main() {
             <div id="upbtn">
                 <a href="#" className=" bx bx-up-arrow-alt btn btn-outline-light display-1 bnt"> </a>
             </div>
-                <div className=" col-lg-3 d-lg-none mt-5 d-flex ">
-                    <img id="imgbg" className=" border rounded-circle img-fluid mx-auto" src={myimg} alt="" />
-                </div>
+            {/* HOME */}
+            <div className=" col-lg-3 d-lg-none mt-5 d-flex ">
+                <img id="imgbg" className=" border rounded-circle img-fluid mx-auto" src={myimg} alt="" />
+            </div>
             <div className=" mt-5 row ">
                 {/* <!-- dsktpview --> */}
                 <div className=" text-start col-lg-9  mt-5">
@@ -61,7 +62,7 @@ export default function Main() {
                 <div className=" col-lg-3 d-none d-lg-block mt-5">
                     <img id="imgbg" className=" border rounded-circle img-fluid" src={myimg} alt="" />
                 </div>
-               
+
             </div>
             {/* <!-- no shake-error --> */}
             <div className="  container mt-5 text-center">
@@ -93,27 +94,27 @@ export default function Main() {
                         <i className="bx bxl-html5 h3 "></i>
                         <h5>HTML</h5>
                         <div className="progress pup" >
-                            <div className="progress-bar " id="pbclr" >90%</div>
+                            <div className="progress-bar " id="pbclr" style={{ backgroundColor: 'blue', width: '90%' }}>90%</div>
                         </div>
                         <i className='bx bxl-css3 mt-3 h3' ></i>
                         <h5>CSS</h5>
                         <div className="progress pup ">
-                            <div className="progress-bar " id="pbclr" >80%</div>
+                            <div className="progress-bar " id="pbclr" style={{ backgroundColor: 'blue', width: '80%' }}>80%</div>
                         </div>
                         <i className='bx bxl-javascript mt-3 text-warning h3'></i>
                         <h5 className=" ">JavaScript</h5>
                         <div className="progress pup" >
-                            <div className="progress-bar " id="pbclr" style={{backgroundColor : 'blue' , width : '80%'}} >80%</div>
+                            <div className="progress-bar " id="pbclr" style={{ backgroundColor: 'blue', width: '80%' }} >80%</div>
                         </div>
                         <i className='bx bxl-react mt-3 text-primary h4'></i>
                         <h5 className=" ">ReactJS</h5>
                         <div className="progress pup " >
-                            <div className="progress-bar " id="pbclr" >70%</div>
+                            <div className="progress-bar " id="pbclr" style={{ backgroundColor: 'blue', width: '80%' }}>70%</div>
                         </div>
                         <i className='bx bxl-java mt-3  h3 javaclr'></i>
                         <h5 className=" ">JAVA</h5>
                         <div className="progress pup" >
-                            <div className="progress-bar " id="pbclr" >50%</div>
+                            <div className="progress-bar " id="pbclr" style={{ backgroundColor: 'blue', width: '80%' }}>50%</div>
                         </div>
                     </div>
                 </div>
@@ -165,7 +166,7 @@ export default function Main() {
             </div>
 
             <div className=" row">
-                <div className="col mt-5">
+                <div className="col-sm-12 col-md-6 col-lg-4 mt-5">
                     <div className="card" >
                         <img src={myimg} className="card-img-top" alt="..." />
                         <div className="card-body ">
@@ -177,7 +178,7 @@ export default function Main() {
                         <a href="abcd" className="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-                <div className="col mt-5">
+                <div className="col-sm-12 col-md-6 col-lg-4  mt-5">
                     <div className="card" >
                         <img src={myimg} className="card-img-top" alt="..." />
                         <div className="card-body ">
@@ -189,7 +190,7 @@ export default function Main() {
                         <a href="abcd" className="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
-                <div className="col mt-5">
+                <div className="col-sm-12 col-md-6 col-lg-4 mt-5">
                     <div className="card" >
                         <img src={myimg} className="card-img-top" alt="..." />
                         <div className="card-body ">
