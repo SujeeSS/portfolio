@@ -19,7 +19,6 @@ export default function Main() {
     React.useEffect(() => {
         const typed = new Typed(el.current, typ);
 
-
         return () => {
             // Destroy Typed instance during cleanup to stop animation
             typed.destroy();
