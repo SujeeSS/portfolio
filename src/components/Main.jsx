@@ -22,7 +22,7 @@ export default function Main() {
         return () => {
             // Destroy Typed instance during cleanup to stop animation
             typed.destroy();
-
+            
         };
     }, []);
     return (
