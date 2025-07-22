@@ -7,7 +7,6 @@ export default function Main() {
     // <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js "></script>
 
     const el = React.useRef(null);
-
     const typ = {
         strings: ["Frontend Developer", "Web developer"],
         typeSpeed: 100,
